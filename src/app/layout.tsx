@@ -16,6 +16,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <title>Últimos lanzamientos de tus plataformas de streaming</title>
+        <meta name="description" content='Descubre los últimos lanzamientos de tus plataformas de streaming, Netflix, Amazon Prime Video, HBO Max, Disney+ y más en un solo lugar.' />
+
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
