@@ -24,7 +24,7 @@ export default function RootLayout({
         <meta name="description" content='Descubre los últimos lanzamientos de tus plataformas de streaming, Netflix, Amazon Prime Video, HBO Max, Disney+ y más en un solo lugar.' />
 
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   )
 }
