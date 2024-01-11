@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import { STATIC_API_URL } from "@/config/constants";
+import { STATIC_API_URL } from "@/config/constants"
+import { MoviePosterImage } from './MoviePosterImage'
 
 interface Props {
   movie: any
@@ -10,7 +11,7 @@ function formatDate(date: any) {
     year: "numeric",
     month: "short",
     day: "numeric",
-  });
+  })
 }
 
 export const MovieItem = ({ movie }: Props) => {
@@ -26,10 +27,11 @@ export const MovieItem = ({ movie }: Props) => {
             <source srcSet={`${STATIC_API_URL}/posters/${movie.image}`} media="(max-width: 768px)" />
           </picture>
 
-          <Image src={`${STATIC_API_URL}posters/${movie.image}`} width="170" height="241" className="w-full h-full object-cover" alt={movie.title} loading="lazy" decoding="async" />
+          <MoviePosterImage movie={movie} />
+
           <div className="absolute bottom-0 bg-black/30 w-full hidden hover:block group-hover:block backdrop-blur-sm">
             <div className="text-white whitespace-pre-wrap text-sm py-4 px-2">{movie.title}</div>
-          </div>
+          MoviePosterImage</div>
         </div>
       </div>
     </a>

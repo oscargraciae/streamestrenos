@@ -1,9 +1,9 @@
 export interface Movie {
   id?: string
-  provider?: string
-  title?: string
+  provider: string
+  title: string
   url?: string
-  slug?: string
+  slug: string
   description?: string
   image?: string
   poster?: string
