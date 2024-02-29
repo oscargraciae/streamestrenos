@@ -12,4 +12,5 @@ export interface Movie {
   year?: string
   directors?: string[]
   classification?: string
+  date?: string
 }

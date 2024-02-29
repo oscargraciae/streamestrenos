@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { STREAM_POVIDERS } from "@/config/constants";
+import Image from "next/image"
+import { STREAM_POVIDERS } from "@/config/constants"
 
 export const StreamProviders = () => (
   <div className="space-x-1 md:space-x-8 flex flex-row">
@@ -9,12 +9,12 @@ export const StreamProviders = () => (
           <Image
             src={`/providers/${item.icon}`}
             alt={item.name}
-            width="72"
-            height="72"
-            className="rounded-md hover:scale-150 transition ease-in-out"
+            width="64"
+            height="64"
+            className="rounded-md hover:scale-125 transition ease-in-out duration-300"
           />
         </div>
       </a>
     ))}
   </div>
-);
+)

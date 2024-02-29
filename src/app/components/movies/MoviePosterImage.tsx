@@ -8,7 +8,7 @@ export const MoviePosterImage = ({ movie }: { movie: Movie }) => (
     src={`${STATIC_API_URL}posters/${movie.image}`}
     width="170"
     height="241"
-    className="w-full h-full object-cover"
+    className="w-full h-full object-cover rounded-md"
     alt={movie.title}
     loading="lazy"
     onError={(e) => {

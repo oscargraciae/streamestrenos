@@ -28,3 +28,30 @@ export function moviesGroupByProvider(movies: Movie[]): MoviesGroupedByProvider 
 
   return _movies || {}
 }
+
+
+interface MoviesGroupedByDate {
+  [date: string]: Movie[];
+}
+
+export function moviesGroupByDate(movies: Movie[]): MoviesGroupedByDate {
+  const _movies = movies?.reduce((acc: MoviesGroupedByProvider | undefined, movie: Movie) => {
+    const { date } = movie
+
+    if (!date) return acc
+    
+    if (!acc) {
+      acc = {}
+    }
+
+    if (!acc[date]) {
+      acc[date] = []
+    }
+
+    acc[date].push(movie)
+    
+    return acc
+  }, undefined)
+
+  return _movies || {}
+}
