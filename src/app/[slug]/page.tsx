@@ -15,10 +15,10 @@ async function getMovie(slug: string) {
 export default async function Movie({ params }: { params: { slug: string } }) {
   const data = await getMovie(params.slug)
   const { title, year, description, runtime, genres, provider, providerStreamURL, image, poster, similarMovies } = data?.movie
-  console.log(data.movie)
+  
   return (
     <main className="flex flex-row justify-center flex-1 ">
-		<section className="text-white container flex flex-col">
+		<section className=" container flex flex-col">
 
       <div id='header-movie' className="relative">
         <div className="h-[320px] relative">
@@ -31,7 +31,7 @@ export default async function Movie({ params }: { params: { slug: string } }) {
             loading="lazy" />
         </div>
         
-        <div className="w-[170px] md:w-[340px] mx-[25%] md:mx-8 border-4 border-black absolute top-32 rounded-lg shadow-sm shadow-black">
+        <div className="w-[170px] md:w-[280px] mx-[25%] md:mx-8 border-4 border-black absolute top-32 rounded-lg glass">
           <Image
             src={`${STATIC_API_URL}posters/${poster}`}
             width="170"
@@ -49,14 +49,14 @@ export default async function Movie({ params }: { params: { slug: string } }) {
           </a> */}
           <div className="flex flex-row flex-wrap">
             
-            <div className="text-xs md:text-sm px-4 py-2 rounded-full bg-gray-500 text-white flex flex-row justify-between items-center mb-4 mr-3">
+            <div className="text-xs md:text-sm px-4 py-2 rounded-full bg-gray-500 flex flex-row justify-between items-center mb-4 mr-3">
               <span className="">{runtime}</span>
             </div>
             {genres?.map((item: any, index: number) => {
               if (item) {
                 return (
                   <div key={index} className="flex">
-                    <span className="md:text-sm text-xs px-4 mr-3 py-2 rounded-full bg-gray-500 text-white mb-4">{item}</span>
+                    <span className="md:text-sm text-xs px-4 mr-3 py-2 rounded-full bg-gray-500  mb-4">{item}</span>
                   </div>
                 )
               }

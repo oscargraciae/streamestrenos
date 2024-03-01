@@ -36,7 +36,12 @@ interface MoviesGroupedByDate {
 
 export function moviesGroupByDate(movies: Movie[]): MoviesGroupedByDate {
   const _movies = movies?.reduce((acc: MoviesGroupedByProvider | undefined, movie: Movie) => {
-    const { date } = movie
+    // const { createdAt } = movie
+    let date = new Date(movie.createdAt!).toLocaleDateString("es-MX", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    })
 
     if (!date) return acc
     

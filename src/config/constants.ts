@@ -53,8 +53,14 @@ export const STREAM_POVIDERS = [
     icon: 'paramount.webp',
     key: 'paramountplus'
   },
+  // {
+  //   name: 'Apple TV+',
+  //   url: 'https://tv.apple.com/',
+  //   icon: 'appletv.webp',
+  //   key: 'appletvplus'
+  // },
   {
-    name: 'Apple TV+',
+    name: 'Apple TV Plus',
     url: 'https://tv.apple.com/',
     icon: 'appletv.webp',
     key: 'appletvplus'
